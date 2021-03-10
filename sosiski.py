@@ -1,11 +1,14 @@
-# k, n = map(int,input().split())
-a = list()
-# for i in range(k):
-#          a.append(list(map(int, input().split())))
-a = [[0,5], [13,18], [25,475]]
-sum = 0
-for i in range(len(a)):
-    for j in range(len(a[i])-1):
-        sum += ((a[i][j+1]-a[i][j])+1)
-        print(sum)
-print(sum)
+fib1 = fib2 = 1
+a =[]
+n = int(input())
+
+if n < 2:
+    quit()
+
+print(fib1, end=' ')
+print(fib2, end=' ')
+for i in range(2, n):
+    fib1, fib2 = fib2, fib1 + fib2
+    print(fib2, end=' ')
+
+print()
